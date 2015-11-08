@@ -12,7 +12,7 @@ $(function() {
 		});
 		$("#market-rev-intro").css('visibility', 'visible');
 		$("#market-rev-intro").addClass('animated fadeIn');
-		var repeater = setInterval(scrollCheck, 50);
+		repeater = setInterval(scrollCheck, 50);
 	}); 
 	// reason 1 interaction
 	$("#map1").popover({ container: ".mapContainer", placement: "right" });
@@ -41,6 +41,32 @@ $(function() {
 			}).fadeIn(400);
 		}
 	});
+	// reason 3 interaction
+	$("#workers-compare").on('touchstart click', function(event) {
+		if ($(this).attr("src") != "imgs/outcomes/workers-compare-2.jpg") {
+			$(this).fadeOut(400, function() {
+				$(this).attr("src", "imgs/outcomes/workers-compare-2.jpg");
+			}).fadeIn(400);
+		} else {
+			$(this).fadeOut(400, function() {
+				$(this).attr("src", "imgs/outcomes/workers-compare-1.jpg");
+			}).fadeIn(400);
+		}
+	});
+	$("#outcomes-compare").on('touchstart click', function(event) {
+		if ($(this).attr("src") != "imgs/outcomes/outcomes-4.png") {
+			$(this).fadeOut(400, function() {
+				$(this).attr("src", "imgs/outcomes/outcomes-4.png");
+			}).fadeIn(400);
+		} else {
+			$(this).fadeOut(400, function() {
+				$(this).attr("src", "imgs/outcomes/outcomes-3.jpg");
+			}).fadeIn(400);
+		}
+	});
+	$("#outcomes-1").popover({ container: ".outcomesContainer", placement: "right" });
+	$("#outcomes-3").popover({ container: ".outcomesContainer", placement: "left" });
+	$("#outcomes-2").popover({ container: ".outcomesContainer", placement: "right" });
 	// smooth scroll
 	$('a[href*=#]:not([href=#])').on('touchstart click', function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -55,7 +81,7 @@ $(function() {
 		}
 	});
 });
-var intro = $("#intro"), reason1 = $("#reason1"), reason2 = $("#reason2"), outcomes = $("#outcomes");
+var intro = $("#intro"), reason1 = $("#reason1"), reason2 = $("#reason2"), outcomes = $("#outcomes"), repeater;
 function scrollCheck() {
 	if (isScrolledIntoView(intro)) { intro.css('visibility', 'visible'); intro.addClass('animated bounceInLeft'); }
 	if (isScrolledIntoView(reason1)) { reason1.css('visibility', 'visible'); reason1.addClass('animated bounceInRight'); }
