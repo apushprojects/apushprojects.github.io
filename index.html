@@ -9,25 +9,14 @@
 	<link rel="stylesheet" href="./libs/owltheme.css">
 	<link rel="stylesheet" href="./libs/owltransitions.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style> body { padding-top: 64px; } 
-
-	.picture{ position:relative;width:460px; height:339px; margin:0px auto; background-color:#FFF; overflow:hidden; }
-	.picture2 { position:relative;width:366px; height:554px; margin:0px auto; background-color:#FFF; overflow:hidden; }
-	#map-1 { background: url('imgs/reason1/map-1.gif');}
-	#map-2 { background: url('imgs/reason1/map-2.png');}
-	#map-3 { background: url('imgs/reason1/map-3.png');}
-	.more { position:absolute; width:35px; height:35px; text-align:left; overflow:hidden; background-color:#FFF; padding:5px;}
-	.info1 { top:15px; left:15px; }
-	.info2 { top:250px; left:45px; }
-
-	</style>
+	<style> body { padding-top: 64px; } </style>
 </head>
-<body>
+<body style="display: none !important;">
 
 	<embed src="imgs/background-music.mp3" autostart="true" loop="true" width="2" height="0"></embed>
 	<noembed><bgsound src="imgs/background-music.mp3" loop="infinite"></noembed>
 
-	<div id="market-rev-intro" class="owl-carousel owl-theme" style="position:fixed;top:0;left:0;z-index:0;width:100vw;height:100vh;">
+	<div id="market-rev-intro" class="owl-carousel owl-theme" style="position:fixed;top:0;left:0;z-index:-10;width:100vw;height:100vh;visibility:hidden;">
 		<div class="item"><img class="img-responsive" src="imgs/intro/market-rev-intro-1.jpg" style="width:100vw;height:100vh;"></div>
 		<div class="item"><img class="img-responsive" src="imgs/intro/market-rev-intro-2.jpg" style="width:100vw;height:100vh;"></div>
 		<div class="item"><img class="img-responsive" src="imgs/intro/market-rev-intro-3.jpg" style="width:100vw;height:100vh;"></div>
@@ -49,9 +38,10 @@
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Sections&nbsp;<span class="caret"></span></a>
 						<ul class="dropdown-menu">
+							<li><a href="#intro">Introduction</a></li>
 							<li><a href="#reason1">Reason 1<span class="hidden-xs">: Transportation Improvements</span></a></li>
 							<li><a href="#reason2">Reason 2<span class="hidden-xs">: Production Improvements<span></a></li>
-							<li><a data-scroll data-options='{ "easing": "easeInQuad" }' href="#outcomes">Outcomes<span class="hidden-xs">: Change in Labor Structure and Home Structure<span></a></li>
+							<li><a href="#outcomes">Outcomes<span class="hidden-xs">: Change in Labor Structure and Home Structure<span></a></li>
 						</ul>
 					</li>
 				</ul>
@@ -64,7 +54,7 @@
 
 	<div class="container">
 
-		<div class="row" id="intro">
+		<div class="row" id="intro" style="visibility: hidden;">
 			<div class="well well-lg">
 				<div class="page-header text-center"><h3>Welcome to your Interactive Web Tour of Chapter 14</h3></div>
 				<div class="panel panel-success">
@@ -77,7 +67,24 @@
 			</div>
 		</div>
 
-		<div class="row" id="reason1"><div class="panel panel-default"><div class="panel-body">
+		<div class="row" id="reason1" style="visibility: hidden;"><div class="well well-lg">
+			<div class="page-header text-center"><h3>Reason 1: Transportation Improvements</h3></div>
+			<div class="row">
+				<div class="col-sm-5" id="container1">
+					<a id="map1" data-content="<div class='row'><div class='col-sm-12'>&nbsp;&nbsp;<span class='glyphicon glyphicon-leaf'></span>&nbsp;&nbsp;It shortened the expense and time of transportation (to one twentieth what it was before); cities grew along the canal and price was reduced.</div></div><br><div class='row'><div class='col-sm-12'>&nbsp;&nbsp;<span class='glyphicon glyphicon-leaf'></span>&nbsp;&nbsp;This decreased the cost of shipping along with shipping time. It opened more land for settlement.</div></div>" data-html="true" title="Heading"><img class="img-responsive" src="imgs/reason1/map-1.gif"></a>
+				</div>
+				<div class="col-sm-2"></div>
+				<div class="col-sm-5">
+					<a id="map2" data-content="<div class='row'><div class='col-sm-12'>&nbsp;&nbsp;<span class='glyphicon glyphicon-leaf'></span>&nbsp;&nbsp;Played a vital role in opening the West and South along with economic expansion.</div></div><br><div class='row'><div class='col-sm-12'>&nbsp;&nbsp;<span class='glyphicon glyphicon-leaf'></span>&nbsp;&nbsp;Improvements in transporation were needed for raw material transport.</div></div>" data-html="true" title="Heading"><img class="img-responsive" src="imgs/reason1/map-2.png"></a>
+				</div>
+			</div>
+			<hr><blockquote>For further reading: 14.13 - &quot;Highways and Steamboats&quot;, 14.14 - &quot;Clintons Big Ditch in New York&quot;, 14.15 - &quot;The Iron Horse&quot;, 14.16 - &quot;Cables Clippers, and Pony Riders&quot;, and 14.17 - &quot;The Transport Web Binds the Union&quot;
+
+
+			&quot;14.7 - Creeping Mechanization&quot;, &quot;14.8 - Whitney Ends the Fiber Famine&quot;, and &quot;14.9 - Marvels in Manufacturing&quot;</blockquote>
+		</div></div>
+
+		<!--<div class="row" id="reason1"><div class="well well-lg">
 			<div class="page-header text-center"><h3>Reason 1: Transportation Improvements</h3></div>
 			<div class="row">
 				<div class="col-sm-6">
@@ -105,8 +112,8 @@
 					</div>
 				</div>
 			</div>
-							<div class="row">
-								<div class="col-sm-4">
+			<div class="row">
+				<div class="col-sm-4">
 					<div class="picture2" id="map-3">
 						<div class="more info1">
 							<span class="glyphicon glyphicon-leaf" style="font-size: 2em;"></span>
@@ -117,31 +124,27 @@
 							<span>Improvements in transporation were needed for raw material transport.</span>
 						</div>
 					</div>
-					</div>
-				</div>
-			<blockquote>For further reading:</blockquote>
-		</div></div></div>
-
-		<div class="row" id="reason2"><div class="panel panel-default"><div class="panel-body">
-			<div class="page-header text-center"><h3>Reason 2: Production Improvements</h3></div>
-			<div class="row">
-				<div class="col-sm-2"><h3 class="text-center">Eli Whitney</h3><hr></div>
-				<div class="col-sm-3">
-					<img class="img-responsive" src="imgs/reason2/eli-whitney.jpg">
-				</div>
-				<div class="col-sm-6">
-					<img class="img-responsive" id="cotton-gin-compare" src="imgs/reason2/cotton-gin-compare-2.png">
 				</div>
 			</div>
+			<blockquote>For further reading:</blockquote>
+		</div></div>-->
+
+		<div class="row" id="reason2" style="visibility: hidden;"><div class="well well-lg">
+			<div class="page-header text-center"><h3>Reason 2: Production Improvements</h3></div>
 			<div class="row">
 				<div class="col-sm-2"><h3 class="text-center">Samuel Slater</h3><hr></div>
 				<div class="col-sm-3"><img class="img-responsive" src="imgs/reason2/samuel-slater.jpg"></div>
-				<div class="col-sm-6"></div>
+				<div class="col-sm-6"><img class="img-responsive" id="spinning-wheel-compare" src="imgs/reason2/spinning-wheel-compare-1.png"></div>
+			</div><hr>
+			<div class="row">
+				<div class="col-sm-2"><h3 class="text-center">Eli Whitney</h3><hr></div>
+				<div class="col-sm-3"><img class="img-responsive" src="imgs/reason2/eli-whitney.jpg"></div>
+				<div class="col-sm-6"><img class="img-responsive" id="cotton-gin-compare" src="imgs/reason2/cotton-gin-compare-1.png"></div>
 			</div>
 			<hr><blockquote>For further reading: &quot;14.7 - Creeping Mechanization&quot;, &quot;14.8 - Whitney Ends the Fiber Famine&quot;, and &quot;14.9 - Marvels in Manufacturing&quot;</blockquote>
-		</div></div></div>
+		</div></div>
 		
-		<div class="row" id="outcomes"><div class="panel panel-default"><div class="panel-body">
+		<div class="row" id="outcomes" style="visibility: hidden;"><div class="panel panel-default"><div class="panel-body">
 			<div class="page-header text-center"><h3>Outcomes: Change in Labor Structure and Home Structure</h3></div>
 			<blockquote>For further reading:</blockquote>
 		</div></div></div>
@@ -154,33 +157,31 @@
 	<script type="text/javascript" src="libs/owlcarousel.js"></script>
 
 	<script>
-	var repeater = setInterval(scrollCheck, 50); //still need to clear interval
+
 	var intro = $("#intro");
 	var reason1 = $("#reason1");
 	var reason2 = $("#reason2");
 	var outcomes = $("#outcomes");
 	function scrollCheck() {
 		if (isScrolledIntoView(intro)) {
+			intro.css('visibility', 'visible');
 			intro.addClass('animated bounceInLeft');
 		}
 		if (isScrolledIntoView(reason1)) {
+			reason1.css('visibility', 'visible');
 			reason1.addClass('animated bounceInRight');
 		}
 		if (isScrolledIntoView(reason2)) {
+			reason2.css('visibility', 'visible');
 			reason2.addClass('animated bounceInLeft');
-			$("#market-rev-intro").owlCarousel({
-				slideSpeed : 300,
-				paginationSpeed : 400,
-				singleItem : true,
-				autoPlay : 3000,
-				stopOnHover : false,
-				transitionStyle : 'fade'
-			});
 		}
 		if (isScrolledIntoView(outcomes)) {
-			outcomes.addClass('animated bounceInRight')
+			outcomes.css('visibility', 'visible');
+			outcomes.addClass('animated bounceInRight');
+			clearInterval(repeater);
 		}
 	}
+
 	function isScrolledIntoView(elem) {
 		var $window = $(window);
 		var docViewTop = $window.scrollTop();
@@ -188,21 +189,79 @@
 		var elemTop = elem.offset().top;
 		return (elemTop <= docViewBottom);
 	}
-	</script>
 
-	<script>
-	$("#cotton-gin-compare").on('touchstart click', function(event) {
-		if ($("#cotton-gin-compare").attr("src") != "imgs/reason2/cotton-gin-compare-1.png") {
-			$("#cotton-gin-compare").fadeOut(400, function() {
-				$("#cotton-gin-compare").attr("src", "imgs/reason2/cotton-gin-compare-1.png");
+	$("#spinning-wheel-compare").on('touchstart click', function(event) {
+		if ($(this).attr("src") != "imgs/reason2/spinning-wheel-compare-2.jpg") {
+			$(this).fadeOut(400, function() {
+				$(this).attr("src", "imgs/reason2/spinning-wheel-compare-2.jpg");
 			}).fadeIn(400);
 		} else {
-			$("#cotton-gin-compare").fadeOut(400, function() {
-				$("#cotton-gin-compare").attr("src", "imgs/reason2/cotton-gin-compare-2.png");
+			$(this).fadeOut(400, function() {
+				$(this).attr("src", "imgs/reason2/spinning-wheel-compare-1.png");
 			}).fadeIn(400);
 		}
 	});
+	$("#cotton-gin-compare").on('touchstart click', function(event) {
+		if ($(this).attr("src") != "imgs/reason2/cotton-gin-compare-2.png") {
+			$(this).fadeOut(400, function() {
+				$(this).attr("src", "imgs/reason2/cotton-gin-compare-2.png");
+			}).fadeIn(400);
+		} else {
+			$(this).fadeOut(400, function() {
+				$(this).attr("src", "imgs/reason2/cotton-gin-compare-1.png");
+			}).fadeIn(400);
+		}
+	});
+
+	// smooth scroll
+
+	$(function() {
+		$('a[href*=#]:not([href=#])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+					$('html,body').animate({
+						scrollTop: target.offset().top - 84
+					}, 1000);
+					return false;
+				}
+			}
+		});
+	});
+
+	$(document).ready(function() { 
+		$("body").fadeIn(1000, function() {
+			$("#market-rev-intro").owlCarousel({
+				slideSpeed : 300,
+				paginationSpeed : 400,
+				singleItem : true,
+				autoPlay : 3000,
+				stopOnHover : false,
+				transitionStyle : 'fade',
+				mouseDrag: false,
+				touchDrag: false
+			});
+			$("#market-rev-intro").css('visibility', 'visible');
+			$("#market-rev-intro").addClass('animated fadeIn');
+
+			var repeater = setInterval(scrollCheck, 50);
+			$("#map1").popover({ container: ".col-sm-6", placement: "right" });
+			$("#map2").popover({ container: ".col-sm-6", placement: "left" });
+		}); 
+	});
+
 	</script>
+
+</body>
+</html>
+
+<!--
+	<div class="row">
+				<div class="col-xs-6 text-right"><a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-left"></span></a></div>
+				<div class="col-xs-6 text"><a href="#reason2" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-right"></span></a></div>
+			</div>
+
 
 	<script type="text/javascript">
 	var switchy = false;
@@ -217,15 +276,17 @@
 	});
 	</script>
 
-</body>
-</html>
 
-<!--
-	<div class="row">
-				<div class="col-xs-6 text-right"><a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-left"></span></a></div>
-				<div class="col-xs-6 text"><a href="#reason2" class="btn btn-primary"><span class="glyphicon glyphicon-chevron-right"></span></a></div>
-			</div>
-		-->
+	.picture{ position:relative;width:460px; height:339px; margin:0px auto; background-color:#FFF; overflow:hidden; }
+	.picture2 { position:relative;width:366px; height:554px; margin:0px auto; background-color:#FFF; overflow:hidden; }
+	#map-1 { background: url('imgs/reason1/map-1.gif');}
+	#map-2 { background: url('imgs/reason1/map-2.png');}
+	#map-3 { background: url('imgs/reason1/map-3.png');}
+	.more { position:absolute; width:35px; height:35px; text-align:left; overflow:hidden; background-color:#FFF; padding:5px;}
+	.info1 { top:15px; left:15px; }
+	.info2 { top:250px; left:45px; }
+
+-->
 
 
 
@@ -258,6 +319,16 @@
 	});
 	</script>
 
+
+	var isMobile = {
+		Android: function() { return navigator.userAgent.match(/Android/i); },
+		BlackBerry: function() { return navigator.userAgent.match(/BlackBerry/i); },
+		iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+		Opera: function() { return navigator.userAgent.match(/Opera Mini/i); },
+		Windows: function() { return navigator.userAgent.match(/IEMobile/i); },
+		any: function() { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
+	};
+	var checkMobile = isMobile.any();
 
 
 
